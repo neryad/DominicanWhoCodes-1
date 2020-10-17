@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:dominican_who_codes/providers/menu_provider.dart';
 import 'package:dominican_who_codes/utils/icono_string_util.dart';
-import 'package:dominican_who_codes/providers/menu_items.dart';
 import 'package:dominican_who_codes/utils/ps_theme.dart';
-
-import 'listview_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -52,14 +49,14 @@ class HomePage extends StatelessWidget {
   Widget _itemsFromMenu(referencer) {
     return ListView(
       children: <Widget>[
-        UserAccountsDrawerHeader(
-          accountName: Text('Starling Germosen'),
-          accountEmail: Text("sgermosen@praysoft.net"),
-          currentAccountPicture: CircleAvatar(
-            backgroundImage: NetworkImage(
-                'https://1.bp.blogspot.com/-Hwa1atOFM2c/W48C3pwTvhI/AAAAAAAAFf8/X7I1u-EEMy0HSnK5RWww_kgwRlAFvSXeQCLcBGAs/s1600/23745678.jpg'),
-          ),
-        ),
+        // UserAccountsDrawerHeader(
+        //   accountName: Text('Starling Germosen'),
+        //   accountEmail: Text("sgermosen@praysoft.net"),
+        //   currentAccountPicture: CircleAvatar(
+        //     backgroundImage: NetworkImage(
+        //         'https://1.bp.blogspot.com/-Hwa1atOFM2c/W48C3pwTvhI/AAAAAAAAFf8/X7I1u-EEMy0HSnK5RWww_kgwRlAFvSXeQCLcBGAs/s1600/23745678.jpg'),
+        //   ),
+        // ),
         ListTile(
           leading: Text("Dark Mode"),
           trailing:
@@ -70,43 +67,51 @@ class HomePage extends StatelessWidget {
           trailing: Icon(Icons.link),
           onTap: website,
         ),
-        Divider(),
-        Padding(
-          padding: const EdgeInsets.only(left: 15.0),
-          child: Text(
-            "Follow Me",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-        Divider(),
+        // Divider(),
+        // Padding(
+        //   padding: const EdgeInsets.only(left: 15.0),
+        //   child: Text(
+        //     "Follow Me",
+        //     style: TextStyle(fontWeight: FontWeight.bold),
+        //   ),
+        // ),
+        // Divider(),
+        // ListTile(
+        //   leading: Image.asset(
+        //     'assets/fb.png',
+        //     width: 35,
+        //     height: 35,
+        //   ),
+        //   title: Text('Facebook'),
+        //   onTap: facebook,
+        // ),
+        // ListTile(
+        //   leading: Image.asset(
+        //     'assets/tweet.png',
+        //     width: 35,
+        //     height: 35,
+        //   ),
+        //   title: Text('Twitter'),
+        //   onTap: twitter,
+        // ),
+        // ListTile(
+        //   leading: Image.asset(
+        //     'assets/insta.png',
+        //     width: 35,
+        //     height: 35,
+        //   ),
+        //   title: Text('Instagram'),
+        //   onTap: instagram,
+        // ),
+        // Divider(),
         ListTile(
-          leading: Image.asset(
-            'assets/fb.png',
-            width: 35,
-            height: 35,
-          ),
-          title: Text('Facebook'),
-          onTap: facebook,
+          leading: Text("Nominate"),
+          trailing: IconButton(
+              icon: Icon(Icons.share),
+              onPressed: () {
+                Share.share('Download the app\n' + 'http://sgermosen.com');
+              }),
         ),
-        ListTile(
-          leading: Image.asset(
-            'assets/tweet.png',
-            width: 35,
-            height: 35,
-          ),
-          title: Text('Twitter'),
-          onTap: twitter,
-        ),
-        ListTile(
-          leading: Image.asset(
-            'assets/insta.png',
-            width: 35,
-            height: 35,
-          ),
-          title: Text('Instagram'),
-          onTap: instagram,
-        ),
-        Divider(),
         ListTile(
           leading: Text("Share"),
           trailing: IconButton(

@@ -77,17 +77,25 @@ Widget CardType1(data) {
                   textAlign: TextAlign.left,
                   style: TextStyle(color: Colors.black, fontSize: 18.0)),
             ])),
+        //TODO: This is not showned
+        Container(
+          height: 44.0,
+          child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: _pageList(webpage, linkedin, twitter, github)),
+        ),
 
+//TODO: If I make it on This Way, It's not be showed
         // Row(children: [
         //   webpageset(webpage, 'webpage'),
         //   webpageset(linkedin, 'linkedin'),
         //   webpageset(twitter, 'twitter'),
         //   webpageset(github, 'github'),
         // ]),
-        webpageset(webpage, 'webpage'),
-        webpageset(linkedin, 'linkedin'),
-        webpageset(twitter, 'twitter'),
-        webpageset(github, 'github'),
+        // webpageset(webpage, 'webpage'),
+        // webpageset(linkedin, 'linkedin'),
+        // webpageset(twitter, 'twitter'),
+        // webpageset(github, 'github'),
         // _externalLinks(, linkedin, twitter, github),
       ],
     ),
@@ -141,7 +149,7 @@ Widget webpageset(String webpage, String icon) {
       ),
       subtitle: Text(''),
       title: Text(''),
-      onTap: launcherUrl(webpage),
+      // onTap: launcherUrl(webpage), TODO: this open the url automatic
     );
   }
 
@@ -196,6 +204,36 @@ _launchURL() async {
   } else {
     throw 'Could not launch $url';
   }
+}
+
+List<Widget> _pageList(webpage, linkedin, twitter, github) {
+  var listSkills = new List<ClipRRect>();
+  if (webpage != null) listSkills.add(_createUrlElement(webpage, 'webpage'));
+  if (linkedin != null) listSkills.add(_createUrlElement(linkedin, 'linkedin'));
+  if (twitter != null) listSkills.add(_createUrlElement(twitter, 'twitter'));
+  if (github != null) listSkills.add(_createUrlElement(github, 'github'));
+
+  return listSkills;
+}
+
+ClipRRect _createUrlElement(webpage, icon) {
+  return ClipRRect(
+    borderRadius: BorderRadius.circular(50.0),
+    child: Container(
+        height: 60,
+        width: 60,
+        color: Colors.black26, //.gray.fromRGBO(52, 58, 64, 0),
+        child: ListTile(
+          leading: Image.asset(
+            'assets/$icon.png',
+            width: 35,
+            height: 35,
+          ),
+          subtitle: Text(''),
+          title: Text(''),
+          onTap: launcherUrl(webpage), // TODO: this open the url automatic
+        )),
+  );
 }
 
 List<Widget> _skillList(skills) {

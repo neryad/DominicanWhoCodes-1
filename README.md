@@ -20,7 +20,7 @@ https://join.slack.com/t/dominicanwhocodes/shared_invite/enQtNzU0MjQ2OTY1MDk1LTc
 Download it, run the command 'flutter run' and test it, Lol, maybe someday will be on playstore :D
 
 Knowed Issues
-*Decoding the Json data, it's not working with UTF8, so, the especial characters are crashing
-*If Name it's big, it said an error for not enought pixels or something like that
-*The externals links to github, webpage and so on, need to be placed on a row, not as column, but, it's giving an error than crash all the app if I made it in that way.
-*The app need to load the data by part, because in that way the app looks too slow.
+###### Decoding the Json data, it's not working with UTF8, so, the especial characters are crashing
+###### If Name it's big, it said an error for not enought pixels or something like that
+###### The externals links to github, webpage and so on, need to be placed on a row, not as column, but, it's giving an error than crash all the app if I made it in that way.
+###### The app need to load the data by part, because in that way the app looks too slow.

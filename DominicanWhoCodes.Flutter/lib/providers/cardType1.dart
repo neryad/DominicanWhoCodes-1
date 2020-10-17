@@ -86,16 +86,19 @@ Widget CardType1(data) {
         ),
 
 //TODO: If I make it on This Way, It's not be showed
+// ull check operator used on a null value
+// The relevant error-causing widget was
+//     ListView
         // Row(children: [
         //   webpageset(webpage, 'webpage'),
         //   webpageset(linkedin, 'linkedin'),
         //   webpageset(twitter, 'twitter'),
         //   webpageset(github, 'github'),
         // ]),
-        // webpageset(webpage, 'webpage'),
-        // webpageset(linkedin, 'linkedin'),
-        // webpageset(twitter, 'twitter'),
-        // webpageset(github, 'github'),
+        webpageset(webpage, 'webpage'),
+        webpageset(linkedin, 'linkedin'),
+        webpageset(twitter, 'twitter'),
+        webpageset(github, 'github'),
         // _externalLinks(, linkedin, twitter, github),
       ],
     ),
@@ -149,6 +152,9 @@ Widget webpageset(String webpage, String icon) {
       ),
       subtitle: Text(''),
       title: Text(''),
+      onTap: () {
+        launcherUrl(webpage);
+      },
       // onTap: launcherUrl(webpage), TODO: this open the url automatic
     );
   }

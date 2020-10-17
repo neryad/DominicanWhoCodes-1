@@ -231,7 +231,7 @@ ClipRRect _createUrlElement(webpage, icon) {
           ),
           subtitle: Text(''),
           title: Text(''),
-          onTap: launcherUrl(webpage), // TODO: this open the url automatic
+          //onTap: launcherUrl(webpage), // TODO: this open the url automatic
         )),
   );
 }

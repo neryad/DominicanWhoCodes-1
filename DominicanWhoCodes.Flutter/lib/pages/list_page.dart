@@ -66,7 +66,11 @@ class DevsListView extends StatelessWidget {
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
-      return jsonResponse.map((dev) => new Developer.fromJson(dev)).toList();
+      var listToReturn = jsonResponse
+          .map((dev) => new Developer.fromJson(dev))
+          .toList()
+            ..shuffle();
+      return listToReturn;
     } else {
       throw Exception('Failed to load developers from API');
     }

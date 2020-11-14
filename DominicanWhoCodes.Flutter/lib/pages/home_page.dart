@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
             child: _itemsFromMenu(referencer),
           ),
           appBar: AppBar(
+            backgroundColor: Colors.black,
             centerTitle: true,
             title: Text(
               "DominicanWho.Codes", style: TextStyle(color: Colors.white),

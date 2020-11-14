@@ -1,0 +1,15 @@
+{
+    "appName" : "DomincanWho.Codes",
+    "routes" : [
+        {
+            "route" : "alert",
+            "icon" : "add_alert",
+            "text": "Alertas"
+        },  
+        {
+            "route" : "list",
+            "icon" : "list",
+            "text": "Listas y Scroll"
+        }
+    ]
+}
